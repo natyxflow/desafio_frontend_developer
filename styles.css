@@ -121,6 +121,8 @@ h3 {
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-bottom: 50px;
+    
 
 }
 
@@ -132,10 +134,12 @@ h3 {
 
 .products {
     margin-top: 50px;
+    margin-bottom: 60px;
     width: 100vh;
-    height: 740px;
+    height: 350px;
     font-size: 12px;
     display: flex;
+   
 }
 
 .products_item {
@@ -145,6 +149,7 @@ h3 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    
 }
 
 .products_picture {
@@ -178,4 +183,80 @@ h3 {
     border-radius: 4px;
     background-color: white;
     border: 1px solid #707070;
+}
+
+.allcards {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    align-items: center;
+
+}
+
+#allcardsbtn {
+    width: 260px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    color: #888888; 
+}
+
+.sharing {
+    width: 100vh;
+    height: 300px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sharing p {
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sharing_form {
+    display: flex;
+}
+
+.sharing_form p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+.sharing_form input {
+    width: 340px;
+    height: 27px;
+    background-color: white;
+    color: #888888;
+    border: #888888 1px solid;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+footer {
+    width: 100vw;
+    height: 300px;
+    background: #707070 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+
+.foot{
+    margin-top: 150px;
 }
