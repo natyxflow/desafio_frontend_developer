@@ -276,7 +276,7 @@ footer p {
 }
 
 
-@media (max-width: 815px) {
+@media (max-width: 800px) {
     .content {
         width: 100%;
         height: auto;
@@ -310,9 +310,18 @@ footer p {
     .sharing_form {
         flex-direction: column;
     }
+
+    header {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    }
+
+    header button {
+        margin: 15px;
+    }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 700px) {
     main {
         width: 100%;
         padding-left: 2vh;
@@ -370,16 +379,21 @@ footer p {
         font-size: 0px;
     }
 
-
-
     header {
         width: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     }
 
     header button {
-        margin: 15px;
+        margin: 5px;
     }
+    
 }
 
+@media (max-width: 345px) {
+    header button {
+        width: 45%;
+        margin: 5px;
+    }
+}
     
