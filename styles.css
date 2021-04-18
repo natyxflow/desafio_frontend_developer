@@ -1,25 +1,35 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing:border-box;
     font-family: Helvetica, Arial, sans-serif;
     
 }
 
+body {
+    
+}
+
+.top {
+
+}
+
 header {
-    width: 100vw;
+    width: 100%;
     height: 400px;
-    background: #707070 0% 0% no-repeat padding-box;
+    background: #707070;
     border: 1px solid #707070;
-    opacity: 1;
     color: white;
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
 }
+
 header button {
     margin-top: 50px;
     margin-right: 40px;
     width: 160px;
     height: 40px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #FFFFFF;
     box-shadow: 0px 1px 6px #00000029;
     border: 1px solid #707070;
     border-radius: 4px;
@@ -44,7 +54,13 @@ header h1 {
 main {
     padding-right: 20vh;
     padding-left: 20vh;
+    width: 100%;
     color: #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  thistle;
 }
 
 .content {
@@ -54,15 +70,22 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    /* background-color: purple; */
 }
 
 .fitem {
     width: 500px;
     margin-right: 40px;
+    /* background-color: royalblue; */
 }
 
 .sitem {
     width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: skyblue; */
 }
 
 .sitem input {
@@ -122,8 +145,6 @@ h3 {
     align-items: center;
     display: flex;
     margin-bottom: 50px;
-    
-
 }
 
 .selection p {
@@ -133,18 +154,21 @@ h3 {
 }
 
 .products {
-    margin-top: 50px;
-    margin-bottom: 60px;
-    width: 100vh;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 100%;
     height: 350px;
     font-size: 12px;
     display: flex;
-   
+    align-items: center;   
+    background-color: royalblue;
 }
 
 .products_item {
     width: 25%;
     height: 350px;
+    margin-left: 5px;
+    margin-right: 5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -190,6 +214,7 @@ h3 {
     flex-direction: column;
     margin-bottom: 150px;
     align-items: center;
+    background-color: salmon;
 
 }
 
@@ -200,6 +225,7 @@ h3 {
     border: 1px solid #707070;
     border-radius: 4px;
     color: #888888; 
+    margin-top: 30px;
 }
 
 .sharing {
@@ -259,4 +285,32 @@ footer p {
 
 .foot{
     margin-top: 150px;
+}
+
+
+@media (max-width: 815px) {
+    .content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main {
+        width: 100%;
+        padding-left: 5vh;
+        padding-right: 5vh;
+    }
+
+    .fitem {
+        margin-right: 0px;
+        width: 75%;
+    }
+    
+    .sitem {
+        margin-top: 15px;
+        width: 75%;
+    }
 }

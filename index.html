@@ -1,25 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <link href="./styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Especial para você!</title>
 </head>
 <body>
-    <div>
+        
         <header>
-            <p id="ftext">uma seleção de produtos</p>
-            <h1>especial para você</h1>
-            <p id="stext">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
-            <a href="https://www.linx.com.br/"><button>Conheça a Linx</button></a>
-            <button>Ajude o algorítimo</button>
-            <button>Seus produtos</button>
-            <button>Compartilhe</button>
+            <div class="top">
+                <p id="ftext">uma seleção de produtos</p>
+                <h1>especial para você</h1>
+                <p id="stext">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+                <a href="https://www.linx.com.br/"><button>Conheça a Linx</button></a>
+                <a href="#algotitmo"><button>Ajude o algorítimo</button></a>
+                <a href="#produtos"><button>Seus produtos</button></a>
+                <a href="#compartilhe"><button>Compartilhe</button></a>
+            </div>            
         </header>
+         
         <main>
             <div class="content">
                 <div class="fitem">
-                    <h3>Ajude o algorítimo a ser mais certeiro</h3>
+                    <a name="algotitmo"><h3>Ajude o algorítimo a ser mais certeiro</h3></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. <br><br> Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
                 </div>
                 <div class="sitem">
@@ -45,7 +50,7 @@
                 </div>
             </div>
             <div class="selection">
-                <p>Sua seleção especial</p>
+                <a name="produtos"><p>Sua seleção especial</p></a>
             </div>
             <div class="allcards">
                 <div class="products">
@@ -147,7 +152,7 @@
             </div>
             
             <div class="selection">
-                <p>Compartilhe a novidade</p>
+                <a name="compartilhe"><p>Compartilhe a novidade</p></a>
             </div>
             <div class="sharing">
                 <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
@@ -171,6 +176,6 @@
                 <p>2019</p>
             </div>
         </footer>
-    </div>
+    
 </body>
 </html>
