@@ -294,12 +294,12 @@ footer p {
 
     .fitem {
         margin-right: 0px;
-        width: 75%;
+        width: 95%;
     }
     
     .sitem {
         margin-top: 15px;
-        width: 75%;
+        width: 95%;
     }
 
     .sharing {
@@ -382,18 +382,31 @@ footer p {
     header {
         width: 100%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        text-align: left;
     }
+
 
     header button {
         margin: 5px;
     }
-    
+
+    #ftext {
+        margin-top: 30px;
+    }
+
+    #stext {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 345px) {
+    
+    
     header button {
         width: 45%;
         margin: 5px;
     }
+
+    
 }
     
