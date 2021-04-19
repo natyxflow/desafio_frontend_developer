@@ -74,6 +74,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 12px;
+    
 }
 
 .sitem input {
@@ -84,6 +86,8 @@ main {
     color: #888888;
     border: #888888 1px solid;
 }
+
+
 
 h3 {
     margin-top: 20px;

@@ -3,173 +3,80 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link href="./styles.css" rel="stylesheet">
+    <link href="./CSS/styles.css" rel="stylesheet">
+    <script src="./JS/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Especial para você!</title>
+    
 </head>
-<body>
-        
+<body>      
         <header>            
                 <p id="ftext">uma seleção de produtos</p>
                 <h1>especial para você</h1>
                 <p id="stext">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
                 <a href="https://www.linx.com.br/"><button>Conheça a Linx</button></a>
-                <a href="#algotitmo"><button>Ajude o algorítimo</button></a>
-                <a href="#produtos"><button>Seus produtos</button></a>
-                <a href="#compartilhe"><button>Compartilhe</button></a>       
+                <a href="#algoritm"><button>Ajude o algorítimo</button></a>
+                <a href="#products"><button>Seus produtos</button></a>
+                <a href="#share"><button>Compartilhe</button></a>       
         </header>
          
         <main>
+
             <div class="content">
                 <div class="fitem">
-                    <a name="algotitmo"><h3>Ajude o algorítimo a ser mais certeiro</h3></a>
+                    <a name="algoritm"><h3>Ajude o algorítimo a ser mais certeiro</h3></a>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. <br><br> Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
                 </div>
                 <div class="sitem">
                     <form>
-                        <p>Seu nome:</p>
-                        <input type="text" name="name">
-                        <p>E-mail</p>
-                        <input type="email" name="email">
-                        <p>CPF:</p>
-                        <input type="number" name="cpf">
+                        <label for="name"><p>Seu Nome:</p></label>
+                        <input type="text" id="name">
+                        <label for="email"><p>E-mail</p></label>
+                        <input type="email" id="email">
+                        <label for="cpf"><p>CPF:</p></label>
+                        <input type="number" id="cpf">
                         <div class="gender">
                             <div class= "female">                            
-                                <input type="radio" name="f">
-                                <p>Feminino</p>
+                                <input type="radio" id="f">
+                                <label for="f">Feminino</label>
                             </div>
                             <div class="male">
-                                <input type="radio" name="m">
-                                <p>Masculino</p>
+                                <input type="radio" id="m">
+                                <label for="m">Masculino</label>
                             </div>
                         </div>
-                        <input type="submit">
+                        <input type="submit" id="send">
                     </form>
                 </div>
             </div>
             <div class="selection">
-                <a name="produtos"><p>Sua seleção especial</p></a>
+                <a name="products"><p>Sua seleção especial</p></a>
             </div>
             <div class="allcards">
                 <div class="products">
                 
                     <div class="products_item">
                         <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
                         
-                    </div>
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
-                    </div>
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
-                    </div>
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
-                    </div>
-                   
-                </div>
-                <div class="products">
-                
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
-                    </div>
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
-                    </div>
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
-                    </div>
-                    <div class="products_item">
-                        <div class="products_picture"></div>
-                        <div class="products_text">
-                            <p class="product_name">Nome do produto</p>
-                            <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-                            <p>De: R$23,99</p>
-                            <p class="product_price">Por: R$19,99</p>
-                            <p>ou 2x de R$9,99</p>
-                            <button>Comprar</button>
-                        </div>
-                        
+
                     </div>
                 </div>
                 <button id="allcardsbtn">Ainda mais produtos aqui!</button>
             </div>
             
             <div class="selection">
-                <a name="compartilhe"><p>Compartilhe a novidade</p></a>
+                <a name="share"><p>Compartilhe a novidade</p></a>
             </div>
             <div class="sharing">
                 <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
                 <div class="sharing_form">
                     <div>
-                        <p>Nome do seu amigo:</p>
-                        <input type="text">
+                        <label for="friendname"><p>Nome do seu amigo:</p></label>
+                        <input type="text" id="friendname">
                     </div>
                     <div>
-                        <p>E-mail:</p>
-                        <input type="text">
+                        <label for="friendmail"><p>E-mail:</p></label>
+                        <input type="text" id="friendmail">
                     </div>
                 </div>
                 <button id="allcardsbtn">Enviar agora</button>
@@ -185,3 +92,16 @@
     
 </body>
 </html>
+
+<!-- <div class="products_text">
+    <p class="product_name"></p>
+    <p class="description">Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+    <p class="price">De: R$23,99</p>
+    <p class="product_price">Por: R$19,99</p>
+    <p>ou 2x de R$9,99</p>
+    <button>Comprar</button>
+</div> 
+
+
+
+-->
