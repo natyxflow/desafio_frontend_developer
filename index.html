@@ -28,13 +28,13 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. <br><br> Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
                 </div>
                 <div class="sitem">
-                    <form>
+                    <form name="fform" action="#" onsubmit="validation()">
                         <label for="name"><p>Seu Nome:</p></label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" required>
                         <label for="email"><p>E-mail</p></label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" required>
                         <label for="cpf"><p>CPF:</p></label>
-                        <input type="number" id="cpf">
+                        <input type="number" id="cpf" required>
                         <div class="gender">
                             <div class= "female">                            
                                 <input type="radio" id="f">
@@ -70,16 +70,18 @@
             <div class="sharing">
                 <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
                 <div class="sharing_form">
-                    <div>
-                        <label for="friendname"><p>Nome do seu amigo:</p></label>
-                        <input type="text" id="friendname">
-                    </div>
-                    <div>
-                        <label for="friendmail"><p>E-mail:</p></label>
-                        <input type="text" id="friendmail">
-                    </div>
+                    <form name="sform" action="#">
+                        <div>
+                            <label for="friendname"><p>Nome do seu amigo:</p></label>
+                            <input type="text" id="friendname" required>
+                        </div>
+                        <div>
+                            <label for="friendmail"><p>E-mail:</p></label>
+                            <input type="email" id="friendmail" required>
+                        </div>
+                    </form>
                 </div>
-                <button id="allcardsbtn">Enviar agora</button>
+                <button id="allcardsbtn" onclick="validations()">Enviar agora</button>
             </div>
         </main>
         <footer>
