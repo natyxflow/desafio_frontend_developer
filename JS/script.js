@@ -45,66 +45,48 @@ function validations() {
     return true;
 }
 
-function callApi(url) {
-    let request = new XMLHttpRequest()
-    request.open("GET", url, false)
-    request.send()
-    return request.responseText
-}
-
-window.onload = function (produto) {
- 
-    var image = innerHTML(produto.image);
-    var productname = innerHTML(produto.name);
-    var price = innerHTML(produto.oldPrice);
-    var productprice = innerHTML(produto.price);
-    var otherprice = innerHTML(produto.count);
-    var description = innerHTML(produto.description);
-
-
-    document.getElementById("ftext").innerHTML = price;
-    
-}
-
-function fill() {
-    let data = callApi("https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1");
-    let produtos = JSON.parse(data);
-    let box = document.getElementById("products_item");
-    produtos.forEach(element => {
-        let card = createCard(element);
-        box.appendChild(card);
-    });
-}
-
-
-
-// window.onload = function () {
-//     let naty = "Nataly";
-//     document.getElementById("ftext")
-//     .innerHTML = naty;
+// function apiget(url) {
+//     let request = new XMLHttpRequest()
+//     request.open("GET", url, false)
+//     request.send()
+//     return request.responseText
 // }
 
-// card = document.createElement("div");
-// image = document.createElement("img");
-// productname = document.createElement("p");
-// price = document.createElement("p");
-// productprice = document.createElement("p");
-// otherprice = document.createElement("p");
-// description = document.createElement("p");
+// function columcreate(product) {
+//     colum = document.createElement("col");
+//     image = document.createElement("row");
+//     productname = document.createElement("row");
+//     description = document.createElement("row");
+//     oldprice = document.createElement("row");
+//     price = document.createElement("row");
+//     anotherprice = document.createElement("row");
+//     image.innerHTML = product.image
+//     productname.innerHTML = product.name
+//     description.innerHTML = product.description
+//     oldprice.innerHTML = product.oldPrice
+//     price.innerHTML = product.price
+//     anotherprice.innerHTML = product.count
 
+//     colum.appendChild(image);
+//     colum.appendChild(productname);
+//     colum.appendChild(description);
+//     colum.appendChild(oldprice);
+//     colum.appendChild(price);
+//     colum.appendChild(anotherprice);
 
-// card.appendChild("image");
-//     card.appendChild("productname");
-//     card.appendChild("price");
-//     card.appendChild("productprice");
-//     card.appendChild("otherprice");
-//     card.appendChild("description");
+//     return colum;
+// }
+
+// function main() {
+//     let data = apiget('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+//     let products = JSON.parse(data);
+//     let prodtable = document.getElementById('prodtable')
     
-//     return card;
+//     products.forEach(product => {
+//         let colum = columcreate(product);
+//         prodtable.appendChild(colum);
+//     });
+    
+// }
 
-// var image = innerHTML(produto.image);
-//     productname.innerHTML = produto.name;
-//     price.innerHTML = produto.oldPrice;
-//     productprice.innerHTML = produto.price;
-//     otherprice.innerHTML = produto.count;
-//     description = produto.description;
+// main();
