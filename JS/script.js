@@ -2,9 +2,9 @@
 
 
 function validation() {
-    if (document.getElementById('name').value.length<3) {
+    if (document.getElementById('fname').value.length<3) {
         alert("Por favor, informe o seu nome!");
-        document.getElementById("name").focus();
+        document.getElementById("fname").focus();
         return false;
     }
 
@@ -44,6 +44,43 @@ function validations() {
     }
     return true;
 }
+
+const prod = (showData) => {
+    for(const eprod in showData) {
+        console.log(eprod)
+    }
+}
+
+
+const showData = (result) => {
+    for(const edata in result) {
+        console.log(edata)
+        
+    }
+    
+}
+
+
+const options = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'default'
+}
+
+fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1', options)
+.then(response => {response.json()
+    .then(data => prod(data))
+})
+.catch(e => console.log('Erro: ' + e, message))
+
+
+
+// var teste = "testando";
+// var paragrafo = document.querySelector(".product_name");
+//     console.log(paragrafo);
+
+// paragrafo.textContent = teste;
+
 
 // function apiget(url) {
 //     let request = new XMLHttpRequest()
