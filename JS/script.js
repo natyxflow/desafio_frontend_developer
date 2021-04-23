@@ -45,85 +45,73 @@ function validations() {
     return true;
 }
 
-const prod = (showData) => {
-    for(const eprod in showData) {
-        console.log(eprod)
-    }
+
+
+async function getProducts() {
+    const response = await fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+
+    return response.json()
 }
 
 
-const showData = (result) => {
-    for(const edata in result) {
-        console.log(edata)
-        
+getProducts().then(data => {
+    const result = data.products
+    const prod = []
+
+    for (let p of result) {
+        prod.push({
+            "id": p.id,
+            "name": p.name,
+            "image": p.image,
+            "oldPrice": p.oldPrice,
+            "price": p.price,
+            "description": p.description,
+            "installments": p.installments
+        })
+
+        let name = prod.name;
+        console.log(name)
     }
     
-}
+    
+    
 
-
-const options = {
-    method: 'GET',
-    mode: 'cors',
-    cache: 'default'
-}
-
-fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1', options)
-.then(response => {response.json()
-    .then(data => prod(data))
 })
-.catch(e => console.log('Erro: ' + e, message))
 
-
-
-// var teste = "testando";
 // var paragrafo = document.querySelector(".product_name");
 //     console.log(paragrafo);
 
-// paragrafo.textContent = teste;
+//     paragrafo.textContent = prod.name
+
+//     console.log(prod)
 
 
-// function apiget(url) {
-//     let request = new XMLHttpRequest()
-//     request.open("GET", url, false)
-//     request.send()
-//     return request.responseText
+// const prod = (showData) => {
+//     for(const eprod in showData) {
+//         console.log(eprod)
+//     }
 // }
 
-// function columcreate(product) {
-//     colum = document.createElement("col");
-//     image = document.createElement("row");
-//     productname = document.createElement("row");
-//     description = document.createElement("row");
-//     oldprice = document.createElement("row");
-//     price = document.createElement("row");
-//     anotherprice = document.createElement("row");
-//     image.innerHTML = product.image
-//     productname.innerHTML = product.name
-//     description.innerHTML = product.description
-//     oldprice.innerHTML = product.oldPrice
-//     price.innerHTML = product.price
-//     anotherprice.innerHTML = product.count
 
-//     colum.appendChild(image);
-//     colum.appendChild(productname);
-//     colum.appendChild(description);
-//     colum.appendChild(oldprice);
-//     colum.appendChild(price);
-//     colum.appendChild(anotherprice);
-
-//     return colum;
-// }
-
-// function main() {
-//     let data = apiget('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
-//     let products = JSON.parse(data);
-//     let prodtable = document.getElementById('prodtable')
-    
-//     products.forEach(product => {
-//         let colum = columcreate(product);
-//         prodtable.appendChild(colum);
-//     });
+// const showData = (result) => {
+//     for(const edata in result) {
+//         console.log(edata)
+        
+//     }
     
 // }
 
-// main();
+
+// const options = {
+//     method: 'GET',
+//     mode: 'cors',
+//     cache: 'default'
+// }
+
+// fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1', options)
+// .then(response => {response.json()
+//     .then(data => prod(data["products"]))
+// })
+// .catch(e => console.log('Erro: ' + e, message))
+
+
