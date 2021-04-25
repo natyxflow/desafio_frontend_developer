@@ -1,5 +1,15 @@
 
+const containerProducts = document.getElementsByClassName('products')[0];
 
+let currentPage = 1;
+
+const infinitePage = document.getElementById('allcardsbtn');
+
+infinitePage.addEventListener('click', function()
+                                  {
+    currentPage++;
+    getProducts();
+})
 
 function validation() {
     if (document.getElementById('fname').value.length<3) {
@@ -47,71 +57,87 @@ function validations() {
 
 
 
-async function getProducts() {
-    const response = await fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+async function Products() {
+    const response = await fetch(`http://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${currentPage}`)
 
     return response.json()
 }
 
-
-getProducts().then(data => {
+function getProducts()
+{
+Products().then(data => {
     const result = data.products
-    const prod = []
+  
 
     for (let p of result) {
-        prod.push({
-            "id": p.id,
-            "name": p.name,
-            "image": p.image,
-            "oldPrice": p.oldPrice,
-            "price": p.price,
-            "description": p.description,
-            "installments": p.installments
-        })
-
-        let name = prod.name;
-        console.log(name)
+        containerProducts.appendChild(buildComponentProduct(p))
     }
-    
-    
-    
-
+          
 })
+}
 
-// var paragrafo = document.querySelector(".product_name");
-//     console.log(paragrafo);
-
-//     paragrafo.textContent = prod.name
-
-//     console.log(prod)
-
-
-// const prod = (showData) => {
-//     for(const eprod in showData) {
-//         console.log(eprod)
-//     }
-// }
-
-
-// const showData = (result) => {
-//     for(const edata in result) {
-//         console.log(edata)
-        
-//     }
+function buildComponentProduct(product) {
+    if(!product) return udefined;
     
-// }
+    const container = document.createElement("div");
+    container.className = 'products_item';
+    
+    const productsPicture = document.createElement("img");
+    productsPicture.className = 'products_picture';
+    productsPicture.setAttribute('src', `https:${product.image}`);
+    
+    const productsText = document.createElement("div");
+    productsText.className = 'products_text';  
+    
+    const productName = document.createElement("p");
+    productName.className = 'product_name';
+    productName.id = 'name';
+    productName.innerText = product.name;
+    
+    const description = document.createElement("p");
+    description.className = 'description';
+    description.id = 'description';
+    description.innerText = product.description;
+    
+    const price = document.createElement("p");
+    price.className = 'price';
+    price.id = 'oldPrice';
+    price.innerText = `De: ${moeda(product.oldPrice)}`;
+    
+    const productPrice = document.createElement("p");
+    productPrice.className = 'product_price';
+    productPrice.id = 'price';
+    productPrice.innerText = `Por: ${moeda(product.price)}`;
+    
+    const installments = document.createElement("p");
+    installments.className = 'installments';
+    installments.innerText = `ou ${product.installments.count}x de ${moeda(product.installments.value)}`;
+    
+    const btn = document.createElement("button");
+    btn.className = 'btn_comprar';
+    btn.innerText = 'Comprar';
+    btn.addEventListener('click', function(){
+      console.log(product.id);
+    })
+    
+    productsText.appendChild(productName);
+    productsText.appendChild(description);
+    productsText.appendChild(price);
+    productsText.appendChild(productPrice);
+    productsText.appendChild(installments);
+    
+    container.appendChild(productsPicture);
+    container.appendChild(productsText);
+    container.appendChild(btn);
+    
+    return container;  
+  }
+
+  function moeda(valor)
+{
+    return `R$ ${parseFloat(valor).toFixed(2).toString().replace('.', ',')}`
+}
 
 
-// const options = {
-//     method: 'GET',
-//     mode: 'cors',
-//     cache: 'default'
-// }
 
-// fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1', options)
-// .then(response => {response.json()
-//     .then(data => prod(data["products"]))
-// })
-// .catch(e => console.log('Erro: ' + e, message))
-
-
+getProducts();
