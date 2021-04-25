@@ -58,7 +58,7 @@ function validations() {
 
 
 async function Products() {
-    const response = await fetch(`http://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${currentPage}`)
+    const response = await fetch(`https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${currentPage}`)
 
     return response.json()
 }
