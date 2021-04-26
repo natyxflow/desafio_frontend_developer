@@ -7,8 +7,8 @@ O projeto é bem simples e para funcionar, basta abrir o arquivo "index.html" no
 
 Os botões que estão no header são todos funcionais, o primeiro direciona para uma página externa e os outros para outras partes da própria página.
 
-Eu priorizei o layout porque tenho mais facilidade com HTML e CSS do que com JavaScript. Eu entendo que o meu códido deveria estar bem mais "limpo", mas eu dei preferência a tentar atender ao máximo de requisitos possíveis do que deixar o código limpo, em breve eu serei capaz de fazer as duas coisas, meus conhecimentos vão progredindo a cada dia. Tentei deixar o projeto o mais responsivo possível.
+Eu priorizei o layout porque tenho mais facilidade com HTML e CSS do que com JavaScript. Eu entendo que o meu código deveria estar bem mais "limpo", mas eu dei preferência a tentar atender ao máximo de requisitos possíveis do que deixar o código limpo, em breve eu serei capaz de fazer as duas coisas, meus conhecimentos vão progredindo a cada dia. Tentei deixar o projeto o mais responsivo possível.
 
-Eu comecei pelo o que eu consegui, o que eu não consegui eu deixei por último para pesquisar, mesmo após várias pesquisas e tentativas, eu infelizmente não consegui consumir a api.
+Eu comecei fazendo o que eu tinha mais facilidade de fazer, o que me dava mais dificuldade eu deixei por último para pesquisar, e ir tentando até conseguir.
 
 Foi uma experiência muito interessante, fiquei feliz e animada com a oportunidade. Obrigada e parabéns aos envolvidos!
